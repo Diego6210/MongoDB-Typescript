@@ -1,12 +1,11 @@
 import { Router,Request, Response} from 'express';
-import Usuario from '../Routers/Usuario';
+import UsuarioRouter from '../Routers/Usuario';
+import { usuarioController } from '../Controller/UsuariosController';
 
 const router: Router = Router();
 
-router.get('/hola', (req:Request, res:Response) =>{
-    res.send('hola como estas');
-});
+router.get('/hola', usuarioController.index);
 
-router.use(Usuario);
+router.use(UsuarioRouter);
 
 export default router;

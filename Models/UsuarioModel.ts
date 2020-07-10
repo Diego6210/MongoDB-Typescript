@@ -6,7 +6,7 @@ export interface Usuario extends mongoose.Document{
     password: string,
     img: string,
     role: string,
-    estado: number
+    estado: boolean
 }
 
 let usuarioSchema = new Schema({
